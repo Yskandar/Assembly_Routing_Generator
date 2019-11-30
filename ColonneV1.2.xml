@@ -1,0 +1,162 @@
+<Produit Nom="Colonne 1">
+	<Fonctions>
+		<Fonction Description="Permettre la conduite" Nom="F1.0">
+			<Fonction_Elementaire Description="Transmettre le couple" Nom="F1.1"/>
+			<Fonction_Elementaire Description="Réaliser connexion avec volant et cardan" Nom="F1.2"/>
+		</Fonction>
+		<Fonction Description="Réaliser le palier de l'arbre intérieur" Nom="F2.0">
+			<Fonction_Elementaire Description="Permettre la rotation" Nom="F2.1"/>
+			<Fonction_Elementaire Description="Réaliser le guidage" Nom="F2.2"/>
+			<Fonction_Elementaire Description="Fixer le roulement (axial)" Nom="F2.3"/>
+		</Fonction>
+		<Fonction Description="Positionner le volant" Nom="F3.0">
+			<Fonction Description="Permettre le réglage du volant" Nom="F3.10">
+				<Fonction_Elementaire Description="Maintenir la position en phase de réglage" Nom="F3.11"/>
+				<Fonction_Elementaire Description="Amortir les mouvements de réglage" Nom="F3.12"/>
+				<Fonction_Elementaire Description="Permettre réglage en hauteur" Nom="F3.13"/>
+				<Fonction_Elementaire Description="Limiter la course (butée)" Nom="F3.13.1"/>
+				<Fonction_Elementaire Description="Permettre le réglage en translation en profondeur" Nom="F3.14"/>
+				<Fonction_Elementaire Description="Limiter la course (butée)" Nom="F3.14.1"/>
+			</Fonction>
+			<Fonction Description="Maintenir en position le volant reglé" Nom="F3.20">
+				<Fonction_Elementaire Description="Résister à la charge de service" Nom="F3.21"/>
+				<Fonction_Elementaire Description="Absorber les forces sans jeu et de façon rigide" Nom="F3.22"/>
+				<Fonction_Elementaire Description="Appliquer la force de serrage de façon ergonomique" Nom="F3.23"/>
+			</Fonction>
+		</Fonction>
+		<Fonction Description="Réaliser les interfaces avec des éléments externes" Nom="F4.0">
+			<Fonction_Elementaire Description="Réaliser la fixation sur le chassis" Nom="F4.1"/>
+			<Fonction_Elementaire Description="Assurer le contact de masse" Nom="F4.2"/>
+			<Fonction_Elementaire Description="Accueillir le commodo" Nom="F4.3"/>
+			<Fonction_Elementaire Description="Accueillir l'habillage (interfaces supplémentaires)" Nom="F4.4"/>
+		</Fonction>
+		<Fonction Description="Sécuriser le conducteur" Nom="F5.0">
+			<Fonction_Elementaire Description="Absorber l'énergie" Nom="F5.1"/>
+			<Fonction_Elementaire Description="Supporter le couple sur la colonne entière en cas de choc" Nom="F5.2"/>
+			<Fonction_Elementaire Description="Assurer la force du maintien en cas de choc" Nom="F5.3"/>
+			<Fonction_Elementaire Description="Eviter l'intrusion du point B dans l'habitacle" Nom="F5.4"/>
+			<Fonction_Elementaire Description="Assurer le respect de la force de collision maxi" Nom="F5.5"/>
+		</Fonction>
+		<Fonction Description="Empêcher le vol" Nom="F6.0">
+			<Fonction_Elementaire Description="Bloquer la rotation de la colonne" Nom="F6.1"/>
+			<Fonction_Elementaire Description="Sécuriser le montage du neiman" Nom="F6.2"/>
+			<Fonction_Elementaire Description="Débloquer la colonne par application de force" Nom="F6.3"/>
+		</Fonction>
+		<Function Description="Assurer la tracabilite" Name="F7.0">
+			<Elementary_Function Description="Assurer la tracabilite" Name="F7.1" />	
+		</Function>
+	</Fonctions>
+	<Pieces>
+		<Piece Nom="Column jacket complete" ID="787390">
+			<Fonction_realisee Nom="F2.3" />
+			<Fonction_realisee Nom="F3.21" />
+			<Fonction_realisee Nom="F6.2" />
+			<Lien_DFC Destination="750639" Ddl="6" Techno="Collage" />
+			<Lien_DFC Destination="701094" Ddl="4" Techno="Emmanchement-Tressage" />
+			<Lien_DFC Destination="730851" Ddl="4" Techno="Emmanchement-Tressage" />
+			<Lien_DFC Destination="698102" Ddl="4" Techno="Assemblage boulonne-Vissage" />
+		</Piece>
+		<Piece Nom="Engraving" ID="0">
+			<Fonction_realisee Nom="F7.1" />
+		</Piece>
+		<Piece Nom="Lock ring 203" ID="695597">
+			<Fonction_realisee Nom="F6.1" />
+		</Piece>
+		<Piece Nom="Ring" ID="753301">
+			<Fonction_realisee Nom="F6.3" />
+			<Lien_DFC Destination="695597" Ddl="6" Techno="Emmanchement-Tressage" />
+		</Piece>
+		<Piece Nom="Spindle" ID="766030">
+			<Fonction_realisee Nom="F1.1" />
+			<Fonction_realisee Nom="F1.2" />
+			<Lien_DFC Destination="753301" Ddl="6" Techno="Emmanchement-Tressage" />
+			<Lien_DFC Destination="0" Ddl="6" Techno="Marquage" />
+			<Lien_DFC Destination="674229" Ddl="6" Techno="Emmanchement-Tressage" />
+			<Lien_DFC Destination="507353" Ddl="6" Techno="Emmanchement-Tressage" />
+		</Piece>
+		<Piece Nom="Angular contact ball bearing" ID="701094">
+			<Fonction_realisee Nom="F2.1" />
+			<Lien_DFC Destination="766030" Ddl="4" Techno="Emmanchement-Tressage" />
+		</Piece>
+		<Piece Nom="Angular contact ball bearing" ID="730851">
+			<Fonction_realisee Nom="F2.1" />
+			<Lien_DFC Destination="766030" Ddl="4" Techno="Emmanchement-Tressage" />
+		</Piece>
+		<Piece Nom="Retaining ring" ID="674229">
+			<Fonction_realisee Nom="F2.3" />
+			<Lien_DFC Destination="701094" Ddl="1" Techno="Mise en place-Chargement" />
+		</Piece>
+		<Piece Nom="Retaining ring" ID="507353">
+			<Fonction_realisee Nom="F2.3" />
+			<Lien_DFC Destination="730851" Ddl="1" Techno="Mise en place-Chargement" />
+		</Piece>
+		<Piece Nom="Clamp" ID="683774">
+			<Fonction_realisee Nom="F3.13" />
+			<Fonction_realisee Nom="F3.13.1" />
+			<Fonction_realisee Nom="F3.21" />
+			<Fonction_realisee Nom="F4.1" />
+			<Fonction_realisee Nom="F5.2" />
+			<Lien_DFC Destination="787390" Ddl="3" Techno="Mise en place-Chargement" />
+			<Lien_DFC Destination="698102" Ddl="2" Techno="Assemblage boulonne-Vissage" />
+			<Lien_DFC Destination="662707" Ddl="1" Techno="Assemblage boulonne-Vissage" />
+			<Lien_DFC Destination="668214" Ddl="1" Techno="Assemblage boulonne-Vissage" />
+		</Piece>
+		<Piece Nom="Wedge washer" ID="668214">
+			<Fonction_realisee Nom="F3.21" />
+			<Fonction_realisee Nom="F3.22" />
+			<Fonction_realisee Nom="F5.2" />
+			<Lien_DFC Destination="693242" Ddl="1" Techno="Assemblage boulonne-Vissage" />
+		</Piece>
+		<Piece Nom="Cam Piece" ID="693242">
+			<Fonction_realisee Nom="F3.21" />
+			<Fonction_realisee Nom="F3.22" />
+			<Fonction_realisee Nom="F5.2" />
+			<Lien_DFC Destination="315612" Ddl="1" Techno="Assemblage boulonne-Vissage" />
+		</Piece>
+		<Piece Nom="Thrust bearing" ID="315612">
+			<Fonction_realisee Nom="F3.21" />
+			<Fonction_realisee Nom="F3.22" />
+			<Fonction_realisee Nom="F5.2" />
+		</Piece>
+		<Piece Nom="flanged nut" ID="662707">
+			<Fonction_realisee Nom="F3.21" />
+			<Fonction_realisee Nom="F3.22" />
+			<Fonction_realisee Nom="F5.2" />
+		</Piece>
+		<Piece Nom="Screw" ID="698102">
+			<Fonction_realisee Nom="F3.13" />
+			<Fonction_realisee Nom="F3.13.1" />
+			<Fonction_realisee Nom="F3.21" />
+			<Fonction_realisee Nom="F3.22" />
+			<Fonction_realisee Nom="F5.2" />
+			<Lien_DFC Destination="315612" Ddl="4" Techno="Assemblage boulonne-Vissage" />
+			<Lien_DFC Destination="693242" Ddl="4" Techno="Assemblage boulonne-Vissage" />
+			<Lien_DFC Destination="668214" Ddl="4" Techno="Assemblage boulonne-Vissage" />
+			<Lien_DFC Destination="662707" Ddl="6" Techno="Assemblage boulonne-Vissage" />
+		</Piece>
+		<Piece Nom="Bracket" ID="693099">
+			<Fonction_realisee Nom="F3.13" />
+			<Fonction_realisee Nom="F3.13.1" />
+			<Fonction_realisee Nom="F4.1" />
+			<Fonction_realisee Nom="F5.1" />
+			<Lien_DFC Destination="600744-1" Ddl="6" Techno="Rivetage" />
+			<Lien_DFC Destination="600744-2" Ddl="6" Techno="Rivetage" />
+			<Lien_DFC Destination="787390" Ddl="2" Techno="Rivetage" />
+		</Piece>
+		<Piece Nom="Rivet-1" ID="600744-1">
+			<Fonction_realisee Nom="F3.13" />
+			<Lien_DFC Destination="787390" Ddl="5" Techno="Rivetage" />
+		</Piece>
+		<Piece Nom="Rivet-2" ID="600744-2">
+			<Fonction_realisee Nom="F3.13" />
+			<Lien_DFC Destination="787390" Ddl="5" Techno="Rivetage" />
+		</Piece>
+		<Piece Nom="Tube" ID="540398" />
+		<Piece Nom="Yoke" ID="709854" />
+		<Piece Nom="Isolator unit" ID="291548" />
+		<Piece Nom="Grease" ID="581433" />
+		<Piece Nom="Label" ID="750639">
+			<Fonction_realisee Nom="F7.1" />
+		</Piece>		
+	</Pieces>
+</Produit>
